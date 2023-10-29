@@ -1,5 +1,3 @@
-Creating a README file for your ATM simulator project in Java with Java Swing and MySQL connection is an essential step to help users understand how to use your application. Here's a template you can use to create your README:
-
 # ATM Simulator Project
 
 This ATM Simulator project is a Java-based application that simulates the functionalities of an Automated Teller Machine (ATM). It is designed using Java Swing for the graphical user interface and connects to a MySQL database to manage user accounts and transactions.
