@@ -35,7 +35,7 @@ public class application {
 
     private static void createTransactionsTable(Connection connection) throws Exception {
         Statement createTableStatement = connection.createStatement();
-        String createTableQuery = "CREATE TABLE IF NOT EXISTS transactions ( Account_Number VARBINARY(15), Action VARCHAR(8), Amount int, FOREIGN KEY (Account_Number) REFERENCES login(Account_Number) )";
+        String createTableQuery = "CREATE TABLE IF NOT EXISTS transactions ( Account_Number VARBINARY(15), Action VARCHAR(8), Amount int, date Date, time Time, FOREIGN KEY (Account_Number) REFERENCES login(Account_Number) )";
         createTableStatement.executeUpdate(createTableQuery);
     }
 
@@ -642,8 +642,10 @@ public class application {
                         login_page();
                     }catch(SQLException e1){
                         JOptionPane.showMessageDialog(null, "Could not add Details!!!", "Error!", JOptionPane.ERROR_MESSAGE);
+                        e1.printStackTrace();
                     }catch(Exception e2){
                         JOptionPane.showMessageDialog(null, "Could not add Details!!!", "Error!", JOptionPane.ERROR_MESSAGE);
+                         e2.printStackTrace();
                     }
                 }else{
                     JOptionPane.showMessageDialog(null, "Enter Valid Details!!!", "Error!", JOptionPane.ERROR_MESSAGE);
